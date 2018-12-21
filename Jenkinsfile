@@ -6,7 +6,7 @@ stage ('SCM_checkout') {
 		doGenerateSubmoduleConfigurations: false, 
 		extensions: [], 
 		submoduleCfg: [], 
-		userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
+		userRemoteConfigs: [[url: 'https://github.com/manojksharma/Myhelloworldweb.git']]])
 	}
 
 stage ('Build') {
@@ -18,7 +18,7 @@ stage ('archive') {
 	}
 
 stage ('deploy') {
-	sh '''cp target/Helloworldwebapp.war /opt/apache-tomcat-8.5.21/webapps
+	sh '''cp target/Myhelloworldwebapp.war /opt/apache-tomcat-8.5.21/webapps
 	/opt/apache-tomcat-8.5.21/bin/shutdown.sh
 	/opt/apache-tomcat-8.5.21/bin/startup.sh'''
 	}
